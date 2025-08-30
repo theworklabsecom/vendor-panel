@@ -9,6 +9,7 @@ import { Form } from "../../components/common/form"
 import AvatarBox from "../../components/common/logo-box/avatar-box"
 import { useSignUpWithEmailPass } from "../../hooks/api"
 import { isFetchError } from "../../lib/is-fetch-error"
+import Logo from "../../assets/logo/G&G-final-logo.png"
 import { useState } from "react"
 
 const RegisterSchema = z.object({
@@ -113,9 +114,10 @@ export const Register = () => {
 
   return (
     <div className="bg-ui-bg-subtle flex min-h-dvh w-dvw items-center justify-center">
-      <div className="m-4 flex w-full max-w-[280px] flex-col items-center">
-        <AvatarBox />
-        <div className="mb-4 flex flex-col items-center">
+      <div className="m-4 flex w-full max-w-[360px] flex-col items-center">
+        {/* <AvatarBox /> */}
+        <div className="mb-3 flex flex-col items-center">
+          <img src={Logo} alt="Logo" className="mb-4 w-64" />
           <Heading>{t("register.title")}</Heading>
           <Text size="small" className="text-ui-fg-subtle text-center">
             {t("register.hint")}
