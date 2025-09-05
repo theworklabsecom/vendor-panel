@@ -15,6 +15,8 @@ import {
   useUpdateProviderForEmailPass,
 } from "../../hooks/api/auth"
 
+import Logo from "../../assets/logo/G&G-final-logo.png"
+
 const ResetPasswordInstructionsSchema = z.object({
   email: z.string().email(),
 })
@@ -60,9 +62,9 @@ const InvalidResetToken = () => {
 
   return (
     <div className="bg-ui-bg-base flex min-h-dvh w-dvw items-center justify-center">
-      <div className="m-4 flex w-full max-w-[300px] flex-col items-center">
-        <LogoBox className="mb-4" />
+      <div className="m-4 flex w-full max-w-[300px] flex-col items-center">        
         <div className="mb-6 flex flex-col items-center">
+           <img src={Logo} alt="Logo" className="mb-4 w-64" />
           <Heading>{t("resetPassword.invalidLinkTitle")}</Heading>
           <Text size="small" className="text-ui-fg-subtle text-center">
             {t("resetPassword.invalidLinkHint")}
@@ -145,8 +147,9 @@ const ChooseNewPassword = ({ token }: { token: string }) => {
   return (
     <div className="bg-ui-bg-subtle flex min-h-dvh w-dvw items-center justify-center">
       <div className="m-4 flex w-full max-w-[280px] flex-col items-center">
-        <LogoBox className="mb-4" />
+       
         <div className="mb-6 flex flex-col items-center">
+           <img src={Logo} alt="Logo" className="mb-4 w-64" />
           <Heading>{t("resetPassword.resetPassword")}</Heading>
           <Text size="small" className="text-ui-fg-subtle text-center">
             {t("resetPassword.newPasswordHint")}
@@ -273,9 +276,9 @@ export const ResetPassword = () => {
 
   return (
     <div className="bg-ui-bg-base flex min-h-dvh w-dvw items-center justify-center">
-      <div className="m-4 flex w-full max-w-[300px] flex-col items-center">
-        <LogoBox className="mb-4" />
+      <div className="m-4 flex w-full max-w-[300px] flex-col items-center">        
         <div className="mb-4 flex flex-col items-center">
+          <img src={Logo} alt="Logo" className="mb-4 w-64" />
           <Heading>{t("resetPassword.resetPassword")}</Heading>
           <Text size="small" className="text-ui-fg-subtle text-center">
             {t("resetPassword.hint")}
